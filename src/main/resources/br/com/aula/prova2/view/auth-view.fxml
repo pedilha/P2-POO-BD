@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="304.0" prefWidth="254.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.aula.prova2.controller.AuthController">
+
+    <!-- LOGIN PANE -->
+    <AnchorPane fx:id="loginPane" prefHeight="350" prefWidth="400">
+        <children>
+            <VBox alignment="CENTER" layoutX="50" layoutY="60" spacing="10">
+                <Label style="-fx-font-size:18px;" text="Login" />
+                <TextField fx:id="loginEmail" promptText="E-mail" />
+                <PasswordField fx:id="loginPassword" promptText="Senha" />
+                <Button onAction="#onLogin" text="Entrar" />
+                <Hyperlink onAction="#showRegister" text="Cadastrar nova conta" />
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <!-- REGISTER PANE -->
+    <AnchorPane fx:id="registerPane" prefHeight="350" prefWidth="400" visible="false">
+        <children>
+            <VBox alignment="CENTER" layoutX="50" layoutY="30" spacing="10">
+                <Label style="-fx-font-size:18px;" text="Cadastro" />
+                <TextField fx:id="regName" promptText="Nome completo" />
+                <TextField fx:id="regEmail" promptText="E-mail" />
+                <PasswordField fx:id="regPassword" promptText="Senha" />
+                <TextField fx:id="regAddress" promptText="Endereço" />
+                <Button onAction="#onRegister" text="Cadastrar" />
+                <Button onAction="#showLogin" text="Voltar ao Login" />
+            </VBox>
+        </children>
+    </AnchorPane>
+
+</StackPane>
