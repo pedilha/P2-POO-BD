@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.aula.prova2.controller.ProductsController"
+      spacing="10">
+
+    <!-- padding configurado via nó <padding> -->
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label text="Produtos Disponíveis"
+           style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+
+    <TableView fx:id="productTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colId"    text="ID"           prefWidth="50"/>
+            <TableColumn fx:id="colName"  text="Nome"         prefWidth="200"/>
+            <TableColumn fx:id="colDesc"  text="Descrição"    prefWidth="250"/>
+            <TableColumn fx:id="colPrice" text="Preço (R$)"   prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Adicionar ao Carrinho"
+                onAction="#onAddToCart"/>
+    </HBox>
+</VBox>

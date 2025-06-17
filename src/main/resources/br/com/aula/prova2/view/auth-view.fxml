@@ -11,7 +11,7 @@
 
 <StackPane prefHeight="304.0" prefWidth="254.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.aula.prova2.controller.AuthController">
 
-    <!-- LOGIN PANE -->
+
     <AnchorPane fx:id="loginPane" prefHeight="350" prefWidth="400">
         <children>
             <VBox alignment="CENTER" layoutX="50" layoutY="60" spacing="10">
@@ -24,7 +24,6 @@
         </children>
     </AnchorPane>
 
-    <!-- REGISTER PANE -->
     <AnchorPane fx:id="registerPane" prefHeight="350" prefWidth="400" visible="false">
         <children>
             <VBox alignment="CENTER" layoutX="50" layoutY="30" spacing="10">
